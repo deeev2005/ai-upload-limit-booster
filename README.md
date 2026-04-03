@@ -3,7 +3,8 @@
 Upload more images and documents to AI tools by combining multiple files into a single optimized upload. Improve context, reduce repeated prompts, and get better AI responses.
 
 ---
-
+## Chrome - https://chromewebstore.google.com/detail/ai-upload-booster/hgimhlchljgiodcgjegcbfplbpfkhbgi?authuser=0&hl=en 
+## Firefox - https://addons.mozilla.org/en-US/firefox/addon/ai-upload-booster/
 ## 🚨 Problem
 
 Most AI tools limit how many files you can upload per prompt.
