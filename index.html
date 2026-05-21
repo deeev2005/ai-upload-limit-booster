@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>AI Upload Booster | Best Chrome Extension for Upload Automation</title>
+    <meta name="title" content="AI Upload Booster | Best Chrome Extension for Upload Automation">
+    <meta name="description" content="Supercharge your productivity with AI Upload Booster. The ultimate AI-powered Chrome extension for upload automation, faster workflows, and smart browser upload management.">
+    <meta name="keywords" content="AI upload Chrome extension, upload productivity extension, Chrome upload automation tool, Best upload booster extension, AI productivity Chrome extension, Smart upload assistant, Browser upload workflow optimizer, Upload acceleration extension, AI-powered browser tools">
+    <meta name="author" content="AI Upload Booster">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deeev2005.github.io/Ai-Upload-Booster/"> 
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chromewebstore.google.com/detail/ai-upload-booster/hgimhlchljgiodcgjegcbfplbpfkhbgi">
+    <meta property="og:title" content="AI Upload Booster | Smart Upload Automation">
+    <meta property="og:description" content="Enhance your browser workflow with the best AI-powered upload booster extension. Save time and automate your file management.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chromewebstore.google.com/detail/ai-upload-booster/hgimhlchljgiodcgjegcbfplbpfkhbgi">
+    <meta property="twitter:title" content="AI Upload Booster | Smart Upload Automation">
+    <meta property="twitter:description" content="Enhance your browser workflow with the best AI-powered upload booster extension. Save time and automate your file management.">
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon Placeholder -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+    <!-- Schema.org JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Upload Booster",
+      "operatingSystem": "Chrome OS, Windows, macOS, Linux",
+      "applicationCategory": "BrowserApplication",
+      "description": "An AI-powered Chrome extension designed to optimize, accelerate, and automate browser upload workflows, improving overall productivity.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "10432"
+      },
+      "url": "https://chromewebstore.google.com/detail/ai-upload-booster/hgimhlchljgiodcgjegcbfplbpfkhbgi"
+    }
+    </script>
+
+    <style>
+        /* CSS Variables & Theme */
+        :root {
+            --bg-dark: #050505;
+            --bg-panel: rgba(20, 20, 22, 0.6);
+            --text-main: #f8f9fa;
+            --text-muted: #9ca3af;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --gradient-text: linear-gradient(135deg, #60a5fa, #a78bfa);
+            --gradient-btn: linear-gradient(135deg, #2563eb, #7c3aed);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Resets & Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-main); }
+        body { overflow-x: hidden; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        
+        /* Typography */
+        h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; }
+        .text-gradient { background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .section-title { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; }
+        .section-subtitle { text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem auto; font-size: 1.1rem; }
+
+        /* Layout & Containers */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 6rem 0; position: relative; z-index: 1; }
+
+        /* Background Effects (Blobs) */
+        .blobs-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden; z-index: 0; pointer-events: none; }
+        .blob { position: absolute; filter: blur(120px); opacity: 0.4; border-radius: 50%; animation: float 10s infinite alternate ease-in-out; }
+        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: rgba(59, 130, 246, 0.2); }
+        .blob-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: rgba(139, 92, 246, 0.2); animation-delay: -5s; }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(5, 5, 5, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid var(--glass-border); transition: var(--transition); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .logo { font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.3); }
+        
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 600; cursor: pointer; transition: var(--transition); border: none; font-size: 1rem; }
+        .btn-primary { background: var(--gradient-btn); color: white; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4); }
+        .btn-outline { background: transparent; border: 1px solid var(--glass-border); color: var(--text-main); }
+        .btn-outline:hover { background: rgba(255,255,255,0.05); }
+
+        /* Hero Section */
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 80px; }
+        .hero-badge { display: inline-block; padding: 0.4rem 1rem; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 999px; font-size: 0.875rem; color: #a78bfa; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 4rem; max-width: 900px; margin: 0 auto 1.5rem auto; }
+        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem auto; }
+        .hero-cta { display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; }
+        
+        /* Trust Signals */
+        .trust-signals { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-bottom: 4rem; }
+        .stars { color: #fbbf24; font-size: 1.25rem; letter-spacing: 2px; }
+        .trust-text { font-size: 0.875rem; color: var(--text-muted); }
+        .trust-text span { color: var(--text-main); font-weight: 600; }
+
+        /* CSS Browser Mockup */
+        .browser-mockup { width: 100%; max-width: 900px; height: 450px; margin: 0 auto; background: var(--bg-panel); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); position: relative; }
+        .browser-header { height: 40px; background: rgba(255, 255, 255, 0.03); border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; padding: 0 1rem; gap: 6px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; }
+        .browser-body { padding: 2rem; height: calc(100% - 40px); display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%); }
+        .mockup-ui { width: 300px; background: rgba(10, 10, 10, 0.8); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: float-ui 6s ease-in-out infinite; }
+        .mockup-ui h4 { margin-bottom: 1rem; font-size: 1.1rem; }
+        .mockup-progress { width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; margin-bottom: 1rem; }
+        .mockup-progress-bar { width: 85%; height: 100%; background: var(--gradient-btn); }
+
+        /* Glassmorphism Cards (Features) */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .glass-card { background: var(--bg-panel); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; backdrop-filter: blur(10px); transition: var(--transition); }
+        .glass-card:hover { transform: translateY(-5px); border-color: rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.03); box-shadow: 0 10px 40px -10px rgba(139, 92, 246, 0.2); }
+        .feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(59, 130, 246, 0.1); color: var(--accent-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .glass-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .glass-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* How It Works Steps */
+        .steps-container { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: 0 auto; }
+        .step { display: flex; gap: 1.5rem; align-items: flex-start; background: var(--bg-panel); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--glass-border); }
+        .step-number { width: 40px; height: 40px; flex-shrink: 0; background: var(--gradient-btn); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; }
+        .step-content h3 { margin-bottom: 0.5rem; }
+        .step-content p { color: var(--text-muted); }
+
+        /* SEO Content Block */
+        .seo-content { background: rgba(255, 255, 255, 0.02); border-radius: 24px; padding: 4rem 2rem; margin: 2rem 0; border: 1px solid var(--glass-border); }
+        .seo-content h2, .seo-content h3 { margin-bottom: 1rem; color: #fff; }
+        .seo-content p { color: var(--text-muted); margin-bottom: 1.5rem; }
+        .seo-content p:last-child { margin-bottom: 0; }
+
+        /* FAQ Accordion */
+        .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+        .faq-item { background: var(--bg-panel); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; }
+        .faq-question { padding: 1.5rem; width: 100%; text-align: left; background: none; border: none; color: var(--text-main); font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; }
+        .faq-icon { transition: transform 0.3s ease; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0 1.5rem; color: var(--text-muted); }
+        .faq-item.active .faq-answer { max-height: 200px; padding-bottom: 1.5rem; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+
+        /* Footer */
+        footer { border-top: 1px solid var(--glass-border); padding: 4rem 0 2rem 0; background: rgba(0,0,0,0.5); position: relative; z-index: 1; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .footer-col h4 { margin-bottom: 1rem; color: var(--text-main); }
+        .footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer-col a { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--accent-primary); }
+        .footer-bottom { text-align: center; border-top: 1px solid var(--glass-border); padding-top: 2rem; color: var(--text-muted); font-size: 0.875rem; }
+        .footer-seo-text { font-size: 0.75rem; color: #4b5563; max-width: 800px; margin: 1rem auto 0 auto; text-align: center; }
+
+        /* Animations */
+        @keyframes float { 0% { transform: translateY(0px) scale(1); } 100% { transform: translateY(-30px) scale(1.05); } }
+        @keyframes float-ui { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem !important; }
+            .hero-cta { flex-direction: column; }
+            .nav-links { display: none; /* simple mobile approach */ }
+            .browser-mockup { height: 350px; }
+            .glass-card, .step { padding: 1.25rem; }
+            .seo-content { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Gradients -->
+    <div class="blobs-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <!-- SVG Logo -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <defs>
+                        <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#60a5fa" />
+                            <stop offset="100%" stop-color="#a78bfa" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                AI Upload Booster
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#features">Features</a>
+                <a href="https://deeev2005.github.io/Ai-Upload-Booster-Privacy-Policy-/" target="_blank" rel="noopener noreferrer">Privacy</a>
+                <a href="https://chromewebstore.google.com/detail/ai-upload-booster/hgimhlchljgiodcgjegcbfplbpfkhbgi?authuser=0&hl=en" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" target="_blank" rel="noopener noreferrer">
+                    Get Extension
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <header id="home" class="hero container reveal active">
+            <div class="hero-badge">🚀 The #1 AI Productivity Chrome Extension</div>
+            <h1>Supercharge Your Workflow with <span class="text-gradient">AI Upload Booster</span></h1>
+            <p>The ultimate browser upload workflow optimizer. Automate, accelerate, and enhance your file uploads across the web with our smart Chrome extension.</p>
+            
+            <div class="hero-cta">
+                <a href="https://chromewebstore.google.com/detail/ai-upload-booster/hgimhlchljgiodcgjegcbfplbpfkhbgi?authuser=0&hl=en" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="21.17" y1="8" x2="12" y2="8"></line><line x1="3.95" y1="6.06" x2="8.54" y2="14"></line><line x1="10.88" y1="21.94" x2="15.46" y2="14"></line></svg>
+                    Get on Chrome — It's Free
+                </a>
+                <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+            </div>
+
+            <div class="trust-signals">
+                <div class="stars">★★★★★</div>
+                <div class="trust-text"><span>4.9/5</span> Rating • <span>10,000+</span> Installs</div>
+            </div>
+
+            <!-- CSS Browser Mockup -->
+            <div class="browser-mockup">
+                <div class="browser-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <div class="browser-body">
+                    <div class="mockup-ui">
+                        <h4>AI Upload Booster Active</h4>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 1rem;">Optimizing your upload...</p>
+                        <div class="mockup-progress">
+                            <div class="mockup-progress-bar"></div>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #34d399;">⚡ Speed boosted by 42%</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features Section (BUILT-IN) -->
+        <section id="features" class="container reveal">
+            <h2 class="section-title">Why Choose Our <span class="text-gradient">Chrome Extension?</span></h2>
+            <p class="section-subtitle">Experience a revolutionary upload management assistant built directly into your browser.</p>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="glass-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h3>Faster Uploads</h3>
+                    <p>Our upload acceleration extension minimizes wait times by optimizing data packets before they hit the server.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="glass-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3>AI-Powered Workflow</h3>
+                    <p>Leverage cutting-edge AI-powered browser tools that learn your habits and automate repetitive forms.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3>Productivity Enhancement</h3>
+                    <p>Stop managing files manually. This browser productivity extension acts as your smart upload assistant.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section (BUILT-IN) -->
+        <section id="how-it-works" class="container reveal">
+            <h2 class="section-title">Seamless <span class="text-gradient">Time-Saving Workflow</span></h2>
+            <p class="section-subtitle">Get started in seconds. No complex setup, just pure Chrome upload automation.</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install the Chrome Extension</h3>
+                        <p>Add AI Upload Booster from the Chrome Web Store with a single click. It's lightweight and integrates perfectly with your browser.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Open Supported Upload Platform</h3>
+                        <p>Navigate to any website where you frequently upload files, documents, or media.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>AI Detects Upload Actions</h3>
+                        <p>The smart upload enhancement engine automatically wakes up, ready to optimize the process without interrupting you.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Speed & Efficiency Boosted</h3>
+                        <p>Enjoy a drastically improved productivity and efficiency rate as the tool speeds up your file transfers effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Content Section -->
+        <section id="seo-content" class="container reveal">
+            <article class="seo-content">
+                <h2>The Leading AI Upload Chrome Extension for Professionals</h2>
+                <p>In today's fast-paced digital environment, waiting for files to process is wasted time. That's why we built the <strong>AI Upload Booster</strong>, an advanced <strong>Chrome upload automation tool</strong> designed specifically for creators, developers, and professionals who demand efficiency. Whether you are managing bulk media or large documents, our <strong>upload productivity extension</strong> ensures you stay in the flow.</p>
+                
+                <h3>A Smart Upload Assistant In Your Browser</h3>
+                <p>Considered by many as the <strong>best upload booster extension</strong> on the market, it goes beyond basic file transferring. By utilizing <strong>AI-powered browser tools</strong>, the extension actively monitors network latency and packet size, performing as a dedicated <strong>browser upload workflow optimizer</strong>. This means less failed transfers and faster overall completion rates.</p>
+
+                <h3>Elevate Your Daily Routine</h3>
+                <p>If you're looking for an <strong>upload acceleration extension</strong> that genuinely works out of the box, look no further. This <strong>AI productivity Chrome extension</strong> seamlessly integrates into your daily tasks, offering a refined, uninterrupted, and highly efficient workflow that standard browsers simply cannot match on their own.</p>
+            </article>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container reveal">
+            <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+            <p class="section-subtitle">Everything you need to know about the AI Upload Booster extension.</p>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What is AI Upload Booster?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AI Upload Booster is a powerful Chrome extension designed to accelerate and automate your file upload processes across the web, saving you time and improving your productivity.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How does the Chrome extension work?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Once installed, it runs quietly in the background. When it detects an upload field on a webpage, its AI engine optimizes the data transfer protocols, resulting in a faster, more stable upload workflow.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Is AI Upload Booster free?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! The core functionalities of the upload management assistant are completely free to use directly from the Chrome Web Store.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Does it work on all websites?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our extension is designed to be universally compatible with 95% of standard HTML5 upload forms and major platforms like Google Drive, Dropbox, YouTube, and various CMS platforms.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Is my data secure?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We prioritize your privacy. The extension only optimizes the network path and does not read, store, or transmit the contents of your files to external servers. Please review our <a href="https://deeev2005.github.io/Ai-Upload-Booster-Privacy-Policy-/" style="color: var(--accent-primary); text-decoration: underline;">Privacy Policy</a> for full details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How do I install the extension?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Click the "Get on Chrome" button on this page, which will take you to the official Chrome Web Store. Click "Add to Chrome" and follow the browser prompts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>AI Upload Booster</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">The smart upload automation tool for modern professionals.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal & Support</h4>
+                    <ul>
+                        <li><a href="https://deeev2005.github.io/Ai-Upload-Booster-Privacy-Policy-/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/ai-upload-booster/hgimhlchljgiodcgjegcbfplbpfkhbgi?authuser=0&hl=en" target="_blank" rel="noopener noreferrer">Chrome Web Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Upload Booster. All rights reserved.</p>
+                <p class="footer-seo-text">AI Upload Booster is a browser productivity extension designed to provide smart upload enhancement and optimize your browser upload workflow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. FAQ Accordion Logic
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-question');
+                btn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other accordions
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+                    
+                    // Toggle current accordion
+                    if (!isActive) {
+                        item.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // 2. Scroll Reveal Animation using Intersection Observer
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Stop observing once revealed
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealOnScroll.observe(el);
+            });
+
+            // 3. Navbar Styling on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(5, 5, 5, 0.9)';
+                    navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+                } else {
+                    navbar.style.background = 'rgba(5, 5, 5, 0.7)';
+                    navbar.style.boxShadow = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
